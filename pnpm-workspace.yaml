@@ -1,0 +1,8 @@
+# Permite los scripts de instalación que necesitan estas herramientas
+# (pnpm 10 usa onlyBuiltDependencies, pnpm 11 o más nuevo usa allowBuilds)
+onlyBuiltDependencies:
+  - esbuild
+  - unrs-resolver
+allowBuilds:
+  esbuild: true
+  unrs-resolver: true
