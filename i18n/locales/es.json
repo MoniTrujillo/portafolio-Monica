@@ -1,0 +1,287 @@
+{
+  "site": {
+    "name": "Mónica Trujillo",
+    "firstName": "Mónica",
+    "fullName": "Mónica Cristina Trujillo Calderón",
+    "location": "Morelia, Michoacán · México"
+  },
+  "nav": {
+    "label": "Navegación principal",
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "open": "Abrir menú",
+    "close": "Cerrar menú",
+    "skip": "Saltar al contenido"
+  },
+  "lang": {
+    "label": "Idioma",
+    "es": "Español",
+    "en": "English"
+  },
+  "common": {
+    "loading": "Cargando…",
+    "retry": "Intentar de nuevo",
+    "viewProject": "Ver proyecto",
+    "error": {
+      "title": "No pudimos cargar esta información",
+      "text": "Revisa tu conexión e intenta de nuevo."
+    },
+    "newTab": "(se abre en otra pestaña)"
+  },
+  "footer": {
+    "portfolio": "Portafolio · {year}",
+    "download": "Descargar CV",
+    "links": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "email": "Correo"
+    }
+  },
+  "home": {
+    "seo": {
+      "title": "Mónica Trujillo · Desarrolladora frontend y diseñadora UX/UI",
+      "description": "Portafolio de Mónica Trujillo: sitios web y apps móviles que se ven bien y se entienden rápido."
+    },
+    "hero": {
+      "title": "Hola, soy {name}.",
+      "subtitle": "Desarrolladora frontend y diseñadora UX/UI. Hago sitios y apps que se ven bien y se entienden rápido."
+    },
+    "values": {
+      "creativity": "Creatividad",
+      "responsibility": "Responsabilidad",
+      "communication": "Comunicación",
+      "adaptability": "Adaptabilidad"
+    },
+    "featured": {
+      "title": "Mis proyectos",
+      "label": "Proyectos destacados",
+      "pause": "Pausar carrusel",
+      "play": "Reanudar carrusel"
+    },
+    "skills": {
+      "title": "Habilidades",
+      "subtitle": "Lo que me define y me impulsa",
+      "items": {
+        "communication": {
+          "title": "Comunicación",
+          "text": "Ideas claras y buena comunicación"
+        },
+        "teamwork": {
+          "title": "Trabajo en equipo",
+          "text": "Colaboración, organización y apoyo"
+        },
+        "creativity": {
+          "title": "Creatividad",
+          "text": "Desarrollo de ideas y soluciones"
+        },
+        "detail": {
+          "title": "Atención al detalle",
+          "text": "Precisión en cada entrega"
+        },
+        "problemSolving": {
+          "title": "Resolución de problemas",
+          "text": "Búsqueda de soluciones"
+        },
+        "adaptability": {
+          "title": "Adaptabilidad",
+          "text": "Aprendo rápido y me ajusto al cambio"
+        }
+      }
+    },
+    "certifications": {
+      "title": "Reconocimientos y certificaciones",
+      "items": {
+        "english": {
+          "title": "Certificate of Achievement · Curso de inglés",
+          "org": "Global Village · Victoria, Canadá"
+        },
+        "dataScience": {
+          "title": "Reconocimiento · Proyectos de Ciencia de Datos",
+          "org": "TECNM Morelia"
+        },
+        "lvmh": {
+          "title": "INSIDE LVMH",
+          "org": "LVMH"
+        },
+        "cle": {
+          "title": "Inglés CLE",
+          "org": "TECNM Morelia"
+        },
+        "aiMarketing": {
+          "title": "IA en Marketing: liberar el potencial",
+          "org": "Instituto Tecnológico de Monterrey"
+        },
+        "python": {
+          "title": "Python Nivel 1",
+          "org": "Instituto Tecnológico de Morelia"
+        },
+        "teekhne": {
+          "title": "Congreso Teckhne",
+          "org": "TECNM Morelia"
+        }
+      }
+    }
+  },
+  "about": {
+    "seo": {
+      "title": "Sobre mí · Mónica Trujillo",
+      "description": "Conoce a Mónica Trujillo, su forma de trabajar y su actividad reciente en GitHub."
+    },
+    "title": "sobre mí",
+    "photoAlt": "Retrato de {name} sosteniendo una laptop",
+    "p1": "Hace tiempo leí una frase del diseñador Josep Lluscà que se me quedó muy grabada: \"Diseñar es anticipar la vida que aún no existe\". A mí me pasa exactamente eso cuando creo software.",
+    "p2": "Por eso, mi parte favorita de todo lo de mi carrera es hacer mockups. Me gusta sentarme a planear las interfaces y saber de qué manera hacerlas.",
+    "p3": "Fuera de las pantallas, me apasiona el mundo de la moda y el modelaje, e intento trasladar esa misma elegancia y estética a cada aplicación que diseño.",
+    "quote": "El diseño da forma a una idea; el código hace que esa idea funcione.",
+    "interest": "Me interesa la gestión de proyectos digitales y poder dar una buena solución para quien la usa.",
+    "signature": "{name}."
+  },
+  "github": {
+    "avatarAlt": "Foto de perfil de {name} en GitHub",
+    "viewProfile": "Ver perfil en GitHub",
+    "errors": {
+      "notFound": "No encontramos al usuario \"{user}\" en GitHub. Revisa que el nombre esté bien escrito.",
+      "rateLimit": "GitHub recibió demasiadas peticiones. Espera unos minutos y vuelve a intentar.",
+      "network": "No pudimos conectarnos con GitHub. Revisa tu conexión e intenta de nuevo."
+    },
+    "handle": "{'@'}{login} · {count} repositorios"
+  },
+  "projects": {
+    "seo": {
+      "title": "Proyectos · Mónica Trujillo",
+      "description": "Sitios web, apps móviles y diseños que he creado, con el problema que resolvían y la solución."
+    },
+    "title": "Proyectos",
+    "featuredLabel": "Destacado",
+    "flip": "Descripción",
+    "count": "{count} proyectos",
+    "filters": {
+      "label": "Filtrar por tipo",
+      "all": "Todos",
+      "web": "Web",
+      "app": "App",
+      "design": "Diseño"
+    },
+    "categories": {
+      "web": "Sitio web",
+      "app": "App móvil",
+      "design": "Diseño"
+    },
+    "cta": {
+      "title": "¿Tienes un proyecto en mente?",
+      "button": "Hablemos"
+    },
+    "detail": {
+      "seoTitle": "{name} · Proyecto de Mónica Trujillo",
+      "back": "Todos los proyectos",
+      "problem": "Problema",
+      "solution": "Solución",
+      "stack": "Tecnologías",
+      "gallery": "Galería",
+      "galleryItem": "Captura {n} del proyecto {name}",
+      "visit": "Visitar sitio",
+      "summary": "Resumen",
+      "viewAll": "Ver proyectos"
+    },
+    "items": {
+      "arquimo": {
+        "name": "Arquimo",
+        "place": "Inmobiliaria",
+        "summary": "Sitio de propiedades en renta y venta con buscador por tipo de operación y botón flotante de contacto.",
+        "problem": "La página era vieja, no estaba actualizada y mezclaba a los proveedores con la renta y venta de propiedades.",
+        "solution": "Reuní toda la información actualizada y diseñé un sitio con un filtro para buscar propiedades y distinguir si están en venta o en renta. Agregué un botón flotante de contacto en todas las pantallas para comunicarse rápido."
+      },
+      "mota": {
+        "name": "MOTA Laboratorio Dental",
+        "place": "Laboratorio dental",
+        "summary": "App móvil interna para seguir en qué etapa va cada pedido, desde la fresadora hasta la paquetería.",
+        "problem": "La organización era deficiente: al encargar una zirconia o trabajos similares se perdía material y casi nunca llegaban a tiempo al cliente.",
+        "solution": "Creé una app interna que muestra la etapa de cada pedido (fresadora, diseño, paquetería) y registra si fue defectuoso o mal diseñado y regresó. Cuando el pedido está listo, avisa al doctor."
+      },
+      "padelOne": {
+        "name": "Pádel One",
+        "place": "Plataforma deportiva",
+        "summary": "App móvil para elegir estudio, reservar cancha o clase y llevar el control de cada reservación.",
+        "problem": "Los clientes reservaban por WhatsApp o Instagram y a veces nadie confirmaba: las canchas se ocupaban o el profesor no llegaba a la clase.",
+        "solution": "Diseñé una app donde eliges tu estudio, reservas y todo queda registrado y confirmado en un solo lugar."
+      },
+      "facialByLimary": {
+        "name": "Facial by Limary",
+        "place": "Nueva York",
+        "summary": "Sitio nuevo para un spa en Nueva York, con servicios y equipo actualizados.",
+        "problem": "El sitio estaba hecho en WordPress y desactualizado: mostraba personal que ya no trabajaba ahí y servicios que ya no se ofrecían.",
+        "solution": "Hice una página limpia y elegante con la información y los servicios al día."
+      },
+      "gosaHoteles": {
+        "name": "Gosa Hoteles",
+        "place": "Hotelería",
+        "summary": "Rediseño con los colores de la marca, más ordenado y más rápido de cargar.",
+        "problem": "La página no usaba los colores de la marca, tenía demasiada información y tardaba mucho en cargar.",
+        "solution": "Rediseñé el sitio con la misma información mejor organizada, un diseño distinto y una carga más rápida."
+      },
+      "tiatsa": {
+        "name": "Tiatsa",
+        "place": "Maquinaria agrícola",
+        "summary": "Sitio para consultar el inventario de tractores y los proveedores de la empresa.",
+        "problem": "La empresa no tenía un lugar donde ver los tractores disponibles para la industria ni a sus proveedores.",
+        "solution": "Construí un sitio web donde se consulta lo que hay y lo que no, para llevar un mejor orden del inventario."
+      },
+      "floreDiLuna": {
+        "name": "Flore di Luna",
+        "place": "Proyecto escolar",
+        "summary": "Diseño en Figma de una experiencia de compra de un perfume exclusivo y personalizado.",
+        "problem": "Se buscaba que comprar un perfume se sintiera especial y único para las mujeres, con la opción de crear uno personalizado.",
+        "solution": "Diseñé en Figma la experiencia completa de elegir y armar tu propio perfume, con un estilo exclusivo y cuidado."
+      }
+    },
+    "meta": "{category} · {place}"
+  },
+  "contact": {
+    "seo": {
+      "title": "Contacto · Mónica Trujillo",
+      "description": "Escríbeme si tienes un proyecto o una idea. Me encantará leerte."
+    },
+    "kicker": "Contacto",
+    "title": "Escríbeme",
+    "intro": "Si tienes un proyecto o una idea, me encantará leerte.",
+    "available": "Disponible para nuevas oportunidades.",
+    "form": {
+      "title": "Cuéntame sobre tu idea",
+      "required": "Todos los campos son obligatorios",
+      "name": {
+        "label": "Nombre",
+        "placeholder": "Tu nombre"
+      },
+      "email": {
+        "label": "Correo",
+        "placeholder": "hola{'@'}ejemplo.com"
+      },
+      "message": {
+        "label": "Mensaje",
+        "placeholder": "¿En qué puedo ayudarte?"
+      },
+      "submit": "Enviar mensaje",
+      "errors": {
+        "required": "Este campo es obligatorio.",
+        "email": "Escribe un correo válido, por ejemplo hola{'@'}ejemplo.com.",
+        "messageShort": "Escribe al menos {min} caracteres."
+      },
+      "success": "Se abrió WhatsApp con tu mensaje.",
+      "whatsappMessage": "Hola Mónica, soy {name} ({email}). {message}",
+      "whatsappFallback": "Si no se abrió, haz clic aquí."
+    }
+  },
+  "error": {
+    "notFound": {
+      "title": "Esta página no existe",
+      "text": "Puede que el enlace esté roto o que la página se haya movido."
+    },
+    "generic": {
+      "title": "Algo salió mal",
+      "text": "Ocurrió un error inesperado. Intenta de nuevo en un momento."
+    },
+    "back": "Volver al inicio"
+  }
+}
