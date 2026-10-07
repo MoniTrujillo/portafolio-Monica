@@ -6,6 +6,8 @@ const props = defineProps<{ project: Project }>()
 const { t } = useI18n()
 const localePath = useLocalePath()
 const flipped = ref(false)
+const link = ref<HTMLElement | null>(null)
+const emit = defineEmits<{ flip: [value: boolean] }>()
 
 const faces = {
   wine: 'bg-wine text-cream',
@@ -14,18 +16,48 @@ const faces = {
   ocean: 'bg-ocean text-cream',
 }
 
+watch(flipped, (value) => emit('flip', value))
+
+// Tipo de puntero del último contacto ('touch', 'mouse' o 'pen'). Se guarda en pointerdown,
+// que se dispara antes del click, para saber si el usuario tocó la pantalla con el dedo.
+const pointerType = ref('')
+
+const to = computed(() => localePath(`/projects/${props.project.slug}`))
+
 // En pantallas táctiles el primer toque voltea la tarjeta y el segundo abre el proyecto.
 function onClick(event: MouseEvent) {
-  if (flipped.value || !window.matchMedia('(hover: none)').matches) return
+  // Ctrl/Cmd/Shift + clic: comportamiento normal del navegador (abrir en otra pestaña).
+  if (event.metaKey || event.ctrlKey || event.shiftKey || event.button !== 0) return
+
   event.preventDefault()
-  flipped.value = true
+
+  const isTouch =
+    pointerType.value === 'touch' ||
+    pointerType.value === 'pen' ||
+    (pointerType.value === '' && window.matchMedia('(hover: none)').matches)
+
+  if (isTouch && !flipped.value) {
+    flipped.value = true
+    return
+  }
+  navigateTo(to.value)
 }
+
+// Un toque fuera de la tarjeta la regresa a su cara frontal.
+function onOutsidePointerDown(event: PointerEvent) {
+  if (flipped.value && !link.value?.contains(event.target as Node)) flipped.value = false
+}
+
+onMounted(() => document.addEventListener('pointerdown', onOutsidePointerDown))
+onBeforeUnmount(() => document.removeEventListener('pointerdown', onOutsidePointerDown))
 </script>
 
 <template>
-  <NuxtLink
-    :to="localePath(`/projects/${props.project.slug}`)"
-    class="group block [perspective:1200px]"
+  <a
+    ref="link"
+    :href="to"
+    class="group block touch-manipulation [-webkit-tap-highlight-color:transparent] [perspective:1200px]"
+    @pointerdown="pointerType = $event.pointerType"
     @click="onClick"
   >
     <div
@@ -61,7 +93,9 @@ function onClick(event: MouseEvent) {
         <AppIcon name="arrowUpRight" class="ml-auto" />
       </div>
     </div>
-    <h3 class="mt-4 text-center text-xl font-bold">{{ t(`projects.items.${project.id}.name`) }}</h3>
+    <h3 class="mt-4 text-center text-xl font-bold">
+      {{ t(`projects.items.${project.id}.name`) }}
+    </h3>
     <p class="text-center text-sm text-ink/70">
       {{
         t('projects.meta', {
@@ -70,5 +104,5 @@ function onClick(event: MouseEvent) {
         })
       }}
     </p>
-  </NuxtLink>
+  </a>
 </template>

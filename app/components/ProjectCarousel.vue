@@ -5,6 +5,8 @@ defineProps<{ projects: Project[] }>()
 
 const { t } = useI18n()
 const paused = ref(false)
+// Mientras una tarjeta esté volteada (toque en móvil) el carrusel se detiene para poder leerla.
+const cardFlipped = ref(false)
 </script>
 
 <template>
@@ -14,7 +16,7 @@ const paused = ref(false)
     >
       <ul
         class="group flex w-max animate-carousel focus-within:[animation-play-state:paused] hover:[animation-play-state:paused] motion-reduce:animate-none"
-        :class="{ '[animation-play-state:paused]': paused }"
+        :class="{ '[animation-play-state:paused]': paused || cardFlipped }"
       >
         <template v-for="copy in 2" :key="copy">
           <li
@@ -25,7 +27,7 @@ const paused = ref(false)
             :aria-hidden="copy === 2 ? 'true' : undefined"
             :inert="copy === 2"
           >
-            <ProjectCard :project="project" />
+            <ProjectCard :project="project" @flip="cardFlipped = $event" />
           </li>
         </template>
       </ul>
