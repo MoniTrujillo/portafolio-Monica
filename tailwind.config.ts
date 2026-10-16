@@ -5,11 +5,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: { DEFAULT: '#581C25', dark: '#3E1219' },
+        primary: { DEFAULT: '#94475B', dark: '#7E3A4C' },
         rose: '#8A5560',
-        sage: '#B0B9B5',
-        ocean: '#2F5670',
-        surface: { DEFAULT: '#F3F2EE', light: '#FAF8F2' },
+        sage: '#E2B4C1',
+        ocean: '#5A2A37',
+        surface: { DEFAULT: '#F7DAE7', light: '#FCEEF4' },
         ink: '#171313',
         danger: '#9B1C1C',
       },
