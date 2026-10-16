@@ -9,7 +9,7 @@ const colors = {
   primary: 'bg-primary text-surface',
   sage: 'bg-sage text-ink',
   rose: 'bg-rose text-surface',
-  ocean: 'bg-ocean text-surface',
+  ocean: 'bg-ocean text-ink',
 }
 
 const initial = computed(() => props.project.id.charAt(0))

@@ -8,7 +8,7 @@ export default {
         primary: { DEFAULT: '#94475B', dark: '#7E3A4C' },
         rose: '#8A5560',
         sage: '#E2B4C1',
-        ocean: '#5A2A37',
+        ocean: '#D38C9D',
         surface: { DEFAULT: '#F7DAE7', light: '#FCEEF4' },
         ink: '#171313',
         danger: '#9B1C1C',

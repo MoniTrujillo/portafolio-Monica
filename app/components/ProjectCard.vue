@@ -13,7 +13,7 @@ const faces = {
   primary: 'bg-primary text-surface',
   sage: 'bg-sage text-ink',
   rose: 'bg-rose text-surface',
-  ocean: 'bg-ocean text-surface',
+  ocean: 'bg-ocean text-ink',
 }
 
 watch(flipped, (value) => emit('flip', value))
