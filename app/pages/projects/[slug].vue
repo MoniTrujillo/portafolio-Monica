@@ -30,17 +30,17 @@ useSeoMeta({
       @retry="refresh()"
     />
     <template v-else-if="project">
-      <section class="bg-wine px-gutter py-14 text-cream lg:px-12">
+      <section class="bg-primary px-gutter py-14 text-surface lg:px-12">
         <div class="mx-auto max-w-page">
           <NuxtLink
             :to="localePath('/projects')"
-            class="inline-flex items-center gap-2 text-sm hover:underline focus-visible:outline-cream"
+            class="inline-flex items-center gap-2 text-sm hover:underline focus-visible:outline-surface"
           >
             <AppIcon name="arrowLeft" class="size-4" />
             {{ t('projects.detail.back') }}
           </NuxtLink>
           <h1 class="mt-6 text-5xl font-bold sm:text-7xl">{{ name }}</h1>
-          <p class="mt-3 text-sm text-cream/80">
+          <p class="mt-3 text-sm text-surface/80">
             {{
               t('projects.meta', {
                 category: t(`projects.categories.${project.category}`),
@@ -56,7 +56,7 @@ useSeoMeta({
 
         <section class="grid gap-10 md:grid-cols-2" :aria-label="t('projects.detail.summary')">
           <div>
-            <h2 class="text-2xl font-bold uppercase text-wine">
+            <h2 class="text-2xl font-bold uppercase text-primary">
               {{ t('projects.detail.problem') }}
             </h2>
             <p class="mt-3 max-w-prose leading-relaxed">
@@ -64,7 +64,7 @@ useSeoMeta({
             </p>
           </div>
           <div>
-            <h2 class="text-2xl font-bold uppercase text-wine">
+            <h2 class="text-2xl font-bold uppercase text-primary">
               {{ t('projects.detail.solution') }}
             </h2>
             <p class="mt-3 max-w-prose leading-relaxed">
@@ -74,12 +74,12 @@ useSeoMeta({
         </section>
 
         <section>
-          <h2 class="text-2xl font-bold text-wine">{{ t('projects.detail.stack') }}</h2>
+          <h2 class="text-2xl font-bold text-primary">{{ t('projects.detail.stack') }}</h2>
           <ul class="mt-4 flex flex-wrap gap-2">
             <li
               v-for="tech in project.tech"
               :key="tech"
-              class="rounded-full border border-wine/40 px-4 py-1.5 text-sm"
+              class="rounded-full border border-primary/40 px-4 py-1.5 text-sm"
             >
               {{ tech }}
             </li>
@@ -91,14 +91,14 @@ useSeoMeta({
         </AppButton>
 
         <section>
-          <h2 class="text-2xl font-bold text-wine">{{ t('projects.detail.gallery') }}</h2>
+          <h2 class="text-2xl font-bold text-primary">{{ t('projects.detail.gallery') }}</h2>
           <ul class="mt-6 grid gap-6 sm:grid-cols-2">
             <li v-for="(image, index) in project.gallery" :key="image">
               <img
                 :src="image"
                 :alt="t('projects.detail.galleryItem', { n: index + 1, name })"
                 loading="lazy"
-                class="aspect-[16/10] w-full rounded-2xl border border-wine/15 object-cover object-top"
+                class="aspect-[16/10] w-full rounded-2xl border border-primary/15 object-cover object-top"
               />
             </li>
           </ul>

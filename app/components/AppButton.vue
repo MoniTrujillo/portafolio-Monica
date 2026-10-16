@@ -14,8 +14,8 @@ const props = withDefaults(
 const { t } = useI18n()
 
 const variants = {
-  primary: 'bg-wine text-cream hover:bg-wine-dark',
-  light: 'bg-cream text-wine hover:bg-cream-light',
+  primary: 'bg-primary text-surface hover:bg-primary-dark',
+  light: 'bg-surface text-primary hover:bg-surface-light',
   outline: 'border border-current text-current hover:bg-white/10',
 }
 

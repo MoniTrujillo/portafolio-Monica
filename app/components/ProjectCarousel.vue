@@ -12,7 +12,7 @@ const cardFlipped = ref(false)
 <template>
   <section :aria-label="t('home.featured.label')">
     <div
-      class="overflow-hidden rounded-[2rem] bg-cream-light py-8 shadow-sm motion-reduce:overflow-x-auto"
+      class="overflow-hidden rounded-[2rem] bg-surface-light py-8 shadow-sm motion-reduce:overflow-x-auto"
     >
       <ul
         class="group flex w-max animate-carousel focus-within:[animation-play-state:paused] hover:[animation-play-state:paused] motion-reduce:animate-none"
@@ -34,7 +34,7 @@ const cardFlipped = ref(false)
     </div>
     <button
       type="button"
-      class="mt-4 rounded-full border border-wine px-4 py-2 text-sm font-semibold text-wine transition hover:bg-wine hover:text-cream motion-reduce:hidden"
+      class="mt-4 rounded-full border border-primary px-4 py-2 text-sm font-semibold text-primary transition hover:bg-primary hover:text-surface motion-reduce:hidden"
       :aria-pressed="paused"
       @click="paused = !paused"
     >

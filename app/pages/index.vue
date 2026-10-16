@@ -12,7 +12,7 @@ useSeoMeta({
 
 <template>
   <div>
-    <section class="bg-wine px-gutter pb-20 pt-16 text-cream lg:px-12 lg:pb-28 lg:pt-24">
+    <section class="bg-primary px-gutter pb-20 pt-16 text-surface lg:px-12 lg:pb-28 lg:pt-24">
       <div class="mx-auto max-w-page">
         <h1
           class="max-w-3xl animate-rise text-6xl font-bold leading-[0.95] sm:text-8xl lg:text-9xl"
@@ -20,7 +20,7 @@ useSeoMeta({
           {{ t('home.hero.title', { name: t('site.firstName') }) }}
         </h1>
         <p
-          class="mt-8 max-w-md animate-rise text-base text-cream/85 [animation-delay:200ms] sm:text-lg"
+          class="mt-8 max-w-md animate-rise text-base text-surface/85 [animation-delay:200ms] sm:text-lg"
         >
           {{ t('home.hero.subtitle') }}
         </p>
@@ -41,12 +41,15 @@ useSeoMeta({
       </DataState>
     </section>
 
-    <section class="bg-wine px-gutter py-section text-cream lg:px-12" aria-labelledby="skillsTitle">
+    <section
+      class="bg-primary px-gutter py-section text-surface lg:px-12"
+      aria-labelledby="skillsTitle"
+    >
       <div class="mx-auto max-w-page">
         <h2 id="skillsTitle" class="text-4xl font-bold sm:text-5xl">
           {{ t('home.skills.title') }}
         </h2>
-        <p class="mt-2 text-cream/80">{{ t('home.skills.subtitle') }}</p>
+        <p class="mt-2 text-surface/80">{{ t('home.skills.subtitle') }}</p>
         <ul v-reveal class="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
           <li v-for="skill in skills" :key="skill.key">
             <SkillCard
@@ -64,8 +67,8 @@ useSeoMeta({
         {{ t('home.certifications.title') }}
       </h2>
       <ul v-reveal class="mt-12 grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
-        <li v-for="cert in certifications" :key="cert.key" class="border-t-2 border-wine pt-3">
-          <p class="text-xs font-semibold text-wine">{{ cert.date }}</p>
+        <li v-for="cert in certifications" :key="cert.key" class="border-t-2 border-primary pt-3">
+          <p class="text-xs font-semibold text-primary">{{ cert.date }}</p>
           <h3 class="mt-2 text-lg font-bold leading-snug">
             {{ t(`home.certifications.items.${cert.key}.title`) }}
           </h3>

@@ -9,7 +9,7 @@ const fields = [
 ] as const
 
 const inputClass =
-  'w-full rounded-xl border-2 border-wine bg-cream-light px-4 py-3 text-sm placeholder:text-ink/50 focus-visible:outline-offset-2 aria-[invalid=true]:border-danger'
+  'w-full rounded-xl border-2 border-primary bg-surface-light px-4 py-3 text-sm placeholder:text-ink/50 focus-visible:outline-offset-2 aria-[invalid=true]:border-danger'
 </script>
 
 <template>
@@ -55,13 +55,13 @@ const inputClass =
 
     <AppButton icon="arrowUpRight" type="submit">{{ t('contact.form.submit') }}</AppButton>
 
-    <p v-if="whatsappUrl" role="status" class="rounded-xl bg-wine p-4 text-sm text-cream">
+    <p v-if="whatsappUrl" role="status" class="rounded-xl bg-primary p-4 text-sm text-surface">
       {{ t('contact.form.success') }}
       <a
         :href="whatsappUrl"
         target="_blank"
         rel="noopener noreferrer"
-        class="font-semibold underline focus-visible:outline-cream"
+        class="font-semibold underline focus-visible:outline-surface"
       >
         {{ t('contact.form.whatsappFallback') }}
       </a>

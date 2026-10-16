@@ -12,13 +12,13 @@ const { t } = useI18n()
   <div
     v-if="status === 'error'"
     role="alert"
-    class="rounded-2xl border border-wine/30 bg-cream-light p-8"
+    class="rounded-2xl border border-primary/30 bg-surface-light p-8"
   >
-    <p class="font-serif text-xl font-semibold text-wine">{{ t('common.error.title') }}</p>
+    <p class="font-serif text-xl font-semibold text-primary">{{ t('common.error.title') }}</p>
     <p class="mt-2 max-w-prose text-sm">{{ message || t('common.error.text') }}</p>
     <button
       type="button"
-      class="mt-4 rounded-full border border-wine px-5 py-2 text-sm font-semibold text-wine transition hover:bg-wine hover:text-cream"
+      class="mt-4 rounded-full border border-primary px-5 py-2 text-sm font-semibold text-primary transition hover:bg-primary hover:text-surface"
       @click="$emit('retry')"
     >
       {{ t('common.retry') }}

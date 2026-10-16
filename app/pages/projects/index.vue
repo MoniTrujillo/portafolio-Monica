@@ -22,7 +22,7 @@ useSeoMeta({
 
 <template>
   <div>
-    <section class="bg-wine px-gutter py-16 text-cream lg:px-12 lg:py-20">
+    <section class="bg-primary px-gutter py-16 text-surface lg:px-12 lg:py-20">
       <h1 class="mx-auto max-w-page animate-rise text-6xl font-bold sm:text-8xl">
         {{ t('projects.title') }}
       </h1>
@@ -34,7 +34,7 @@ useSeoMeta({
         <article v-if="spotlight" class="grid items-center gap-8 md:grid-cols-2">
           <ProjectVisual :project="spotlight" device="browser" />
           <div class="flex flex-col items-start gap-4">
-            <p class="text-sm font-semibold uppercase tracking-wide text-wine">
+            <p class="text-sm font-semibold uppercase tracking-wide text-primary">
               {{ t('projects.featuredLabel') }}
             </p>
             <h2 class="text-4xl font-bold sm:text-5xl">
@@ -44,7 +44,7 @@ useSeoMeta({
               <li
                 v-for="tech in spotlight.tech"
                 :key="tech"
-                class="rounded-full border border-wine/40 px-3 py-1 text-xs"
+                class="rounded-full border border-primary/40 px-3 py-1 text-xs"
               >
                 {{ tech }}
               </li>
@@ -70,7 +70,7 @@ useSeoMeta({
       </DataState>
     </div>
 
-    <section class="bg-rose px-gutter py-16 text-center text-cream lg:px-12">
+    <section class="bg-rose px-gutter py-16 text-center text-surface lg:px-12">
       <h2 class="text-3xl font-semibold">{{ t('projects.cta.title') }}</h2>
       <AppButton :to="localePath('/contact')" variant="light" class="mt-6">
         {{ t('projects.cta.button') }}

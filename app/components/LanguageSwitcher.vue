@@ -10,7 +10,7 @@ const options = computed(() =>
 
 <template>
   <div
-    class="flex items-center gap-1 rounded-full bg-cream/15 p-1"
+    class="flex items-center gap-1 rounded-full bg-surface/15 p-1"
     role="group"
     :aria-label="t('lang.label')"
   >
@@ -20,8 +20,10 @@ const options = computed(() =>
       :to="switchLocalePath(option.code as 'es' | 'en')"
       :aria-current="locale === option.code ? 'true' : undefined"
       :lang="option.code"
-      class="rounded-full px-3 py-1 text-xs font-semibold uppercase transition focus-visible:outline-cream"
-      :class="locale === option.code ? 'bg-cream text-wine' : 'text-cream hover:bg-cream/20'"
+      class="rounded-full px-3 py-1 text-xs font-semibold uppercase transition focus-visible:outline-surface"
+      :class="
+        locale === option.code ? 'bg-surface text-primary' : 'text-surface hover:bg-surface/20'
+      "
     >
       <span aria-hidden="true">{{ option.code }}</span>
       <span class="sr-only">{{ t(`lang.${option.code}`) }}</span>

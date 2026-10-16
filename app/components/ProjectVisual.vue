@@ -6,10 +6,10 @@ const props = withDefaults(defineProps<{ project: Project; device?: 'phone' | 'b
 })
 
 const colors = {
-  wine: 'bg-wine text-cream',
+  primary: 'bg-primary text-surface',
   sage: 'bg-sage text-ink',
-  rose: 'bg-rose text-cream',
-  ocean: 'bg-ocean text-cream',
+  rose: 'bg-rose text-surface',
+  ocean: 'bg-ocean text-surface',
 }
 
 const initial = computed(() => props.project.id.charAt(0))
@@ -39,14 +39,14 @@ const screenshot = computed(() => props.project.gallery[0])
         loading="lazy"
         class="size-full object-cover object-top"
       />
-      <span class="absolute left-1/2 top-1.5 h-1 w-8 -translate-x-1/2 rounded-full bg-cream/30" />
+      <span class="absolute left-1/2 top-1.5 h-1 w-8 -translate-x-1/2 rounded-full bg-surface/30" />
     </div>
 
-    <div v-else class="relative w-[88%] overflow-hidden rounded-xl bg-cream-light shadow-2xl">
+    <div v-else class="relative w-[88%] overflow-hidden rounded-xl bg-surface-light shadow-2xl">
       <div class="flex gap-1 bg-ink px-3 py-2">
-        <span class="size-1.5 rounded-full bg-cream/70" />
-        <span class="size-1.5 rounded-full bg-cream/70" />
-        <span class="size-1.5 rounded-full bg-cream/70" />
+        <span class="size-1.5 rounded-full bg-surface/70" />
+        <span class="size-1.5 rounded-full bg-surface/70" />
+        <span class="size-1.5 rounded-full bg-surface/70" />
       </div>
       <img
         v-if="screenshot"

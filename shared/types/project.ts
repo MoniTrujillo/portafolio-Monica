@@ -1,5 +1,5 @@
 export type ProjectCategory = 'web' | 'app' | 'design'
-export type ProjectColor = 'wine' | 'sage' | 'rose' | 'ocean'
+export type ProjectColor = 'primary' | 'sage' | 'rose' | 'ocean'
 
 export interface Project {
   /** Clave camelCase: se usa en los textos (i18n) y en la carpeta de imágenes. */

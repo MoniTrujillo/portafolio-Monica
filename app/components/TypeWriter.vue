@@ -42,7 +42,7 @@ onBeforeUnmount(() => clearInterval(timer))
     <span class="sr-only">{{ text }}</span>
     <span aria-hidden="true">{{ text.slice(0, typed) }}</span>
     <span v-if="isTyping" class="relative inline-block w-0" aria-hidden="true">
-      <span class="absolute -top-[0.1em] left-0 h-[1.1em] w-0.5 animate-pulse bg-wine" />
+      <span class="absolute -top-[0.1em] left-0 h-[1.1em] w-0.5 animate-pulse bg-primary" />
     </span>
     <span class="invisible" aria-hidden="true">{{ text.slice(typed) }}</span>
   </p>

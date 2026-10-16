@@ -12,8 +12,8 @@ const options = ['all', 'web', 'app', 'design']
       :key="option"
       type="button"
       :aria-pressed="model === option"
-      class="rounded-full border border-wine/30 px-5 py-2 text-sm font-semibold transition hover:border-wine"
-      :class="model === option ? 'bg-wine text-cream' : 'bg-cream-light text-ink'"
+      class="rounded-full border border-primary/30 px-5 py-2 text-sm font-semibold transition hover:border-primary"
+      :class="model === option ? 'bg-primary text-surface' : 'bg-surface-light text-ink'"
       @click="model = option"
     >
       {{ t(`projects.filters.${option}`) }}

@@ -3,7 +3,7 @@ defineProps<{ items: string[] }>()
 </script>
 
 <template>
-  <div class="overflow-hidden border-y border-wine/20 bg-cream-light py-4">
+  <div class="overflow-hidden border-y border-primary/20 bg-surface-light py-4">
     <ul
       class="flex w-max animate-marquee gap-10 font-serif text-lg font-semibold hover:[animation-play-state:paused] sm:text-xl"
     >

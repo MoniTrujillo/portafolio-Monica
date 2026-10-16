@@ -17,9 +17,9 @@ const goHome = () => clearError({ redirect: localePath('/') })
 
 <template>
   <NuxtLayout>
-    <section class="relative overflow-hidden bg-ink px-gutter py-section text-cream lg:px-12">
+    <section class="relative overflow-hidden bg-ink px-gutter py-section text-surface lg:px-12">
       <p
-        class="pointer-events-none select-none font-serif text-[10rem] font-bold leading-none text-wine sm:text-[18rem]"
+        class="pointer-events-none select-none font-serif text-[10rem] font-bold leading-none text-primary sm:text-[18rem]"
         aria-hidden="true"
       >
         {{ error.statusCode }}
@@ -28,12 +28,12 @@ const goHome = () => clearError({ redirect: localePath('/') })
         <h1 class="text-3xl font-bold sm:text-5xl">
           {{ t(is404 ? 'error.notFound.title' : 'error.generic.title') }}
         </h1>
-        <p class="mt-4 max-w-lg text-cream/85">
+        <p class="mt-4 max-w-lg text-surface/85">
           {{ t(is404 ? 'error.notFound.text' : 'error.generic.text') }}
         </p>
         <button
           type="button"
-          class="mt-8 rounded-full bg-cream px-6 py-3 font-serif text-sm font-semibold text-wine transition hover:bg-cream-light focus-visible:outline-cream"
+          class="mt-8 rounded-full bg-surface px-6 py-3 font-serif text-sm font-semibold text-primary transition hover:bg-surface-light focus-visible:outline-surface"
           @click="goHome"
         >
           {{ t('error.back') }}

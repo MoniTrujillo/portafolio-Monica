@@ -4,10 +4,10 @@ defineProps<{ icon: string; title: string; text: string }>()
 
 <template>
   <div class="flex flex-col items-center gap-3 text-center">
-    <span class="grid size-12 place-items-center rounded-full bg-cream text-wine">
+    <span class="grid size-12 place-items-center rounded-full bg-surface text-primary">
       <AppIcon :name="icon" />
     </span>
     <h3 class="text-lg font-semibold">{{ title }}</h3>
-    <p class="max-w-[16rem] text-sm text-cream/85">{{ text }}</p>
+    <p class="max-w-[16rem] text-sm text-surface/85">{{ text }}</p>
   </div>
 </template>
