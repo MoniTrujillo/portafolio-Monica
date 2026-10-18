@@ -1,6 +1,13 @@
 <script setup lang="ts">
-import { HTTP_STATUS } from '~/utils/httpErrors'
+import type { Project } from '#shared/types/project'
 import { REQUEST_STATUS } from '~/utils/requestStatus'
+
+definePageMeta({
+  validate: async (route) => {
+    const projects = await $fetch<Project[]>('/api/projects')
+    return projects.some((project) => project.slug === route.params.slug)
+  },
+})
 
 const route = useRoute()
 const { t } = useI18n()
@@ -11,14 +18,6 @@ const slug = computed(() => String(route.params.slug))
 const project = computed(() => projects.value.find((item) => item.slug === slug.value))
 
 const isReady = computed(() => status.value === REQUEST_STATUS.success)
-
-if (status.value === REQUEST_STATUS.success && !project.value) {
-  throw createError({
-    statusCode: HTTP_STATUS.notFound,
-    statusMessage: 'Project not found',
-    fatal: true,
-  })
-}
 
 const name = computed(() => (project.value ? t(`projects.items.${project.value.id}.name`) : ''))
 const device = computed(() => (project.value?.category === 'web' ? 'browser' : 'phone'))

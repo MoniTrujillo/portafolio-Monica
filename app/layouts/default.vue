@@ -11,7 +11,7 @@ const { t } = useI18n()
       {{ t('nav.skip') }}
     </a>
     <AppHeader />
-    <main id="main" class="flex-1">
+    <main id="main" class="flex flex-1 flex-col">
       <slot />
     </main>
     <AppFooter />
