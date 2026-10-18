@@ -135,7 +135,14 @@
     "p1": "A while ago I read a phrase by the designer Josep Lluscà that stuck with me: \"Designing is anticipating the life that does not exist yet\". That is exactly what happens to me when I create software.",
     "p2": "That is why my favorite part of everything in my degree is making mockups. I like to sit down, plan the interfaces and figure out how to build them.",
     "p3": "Away from screens, I am passionate about fashion and modeling, and I bring that same elegance and aesthetic to every application I design.",
-    "quote": "Design gives shape to an idea; code makes that idea work.",
+    "statement": {
+      "lead": "Elegance isn't only worn;",
+      "accent": "it's designed.",
+      "words": {
+        "first": "Fashion",
+        "second": "Design"
+      }
+    },
     "interest": "I am interested in managing digital projects and giving a good solution to the people who use them.",
     "signature": "{name}."
   },
