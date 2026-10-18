@@ -48,14 +48,11 @@ usePageSeo({
       </div>
     </section>
 
-    <section class="bg-cream-light px-gutter pt-12 lg:px-[5%]">
-      <blockquote
-        class="mx-auto flex max-w-[90rem] items-center gap-4 bg-wine px-6 py-8 font-serif text-lg text-cream lg:px-10 lg:text-2xl"
-      >
-        <span class="text-4xl text-cream/60" aria-hidden="true">“</span>
-        {{ t('about.quote') }}
-      </blockquote>
-    </section>
+    <ParallaxStatement
+      :lead="t('about.statement.lead')"
+      :accent="t('about.statement.accent')"
+      :words="[t('about.statement.words.first'), t('about.statement.words.second')]"
+    />
 
     <section class="bg-cream-light px-gutter py-section lg:px-[5%]" aria-labelledby="interestTitle">
       <div
