@@ -5,7 +5,6 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   runtimeConfig: {
     public: {
-      // Cambia el usuario en .env: NUXT_PUBLIC_GITHUB_USER=tu-usuario
       githubUser: 'MoniTrujillo',
     },
   },
@@ -20,15 +19,7 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      link: [
-        { rel: 'icon', href: '/favicon.ico', sizes: 'any' },
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
-        {
-          rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700;800;900&display=swap',
-        },
-      ],
+      link: [{ rel: 'icon', href: '/favicon.ico', sizes: 'any' }],
     },
   },
 })

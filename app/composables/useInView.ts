@@ -1,6 +1,5 @@
 import type { Ref } from 'vue'
 
-/** Pasa a true la primera vez que el elemento entra en pantalla. */
 export function useInView(target: Ref<HTMLElement | undefined>) {
   const inView = ref(false)
   let observer: IntersectionObserver | undefined
