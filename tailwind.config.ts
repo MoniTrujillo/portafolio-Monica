@@ -14,8 +14,8 @@ export default {
         danger: '#9B1C1C',
       },
       fontFamily: {
-        serif: ['"Playfair Display"', 'Georgia', 'serif'],
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        serif: ['"Playfair Display Variable"', 'Georgia', 'serif'],
+        sans: ['"Inter Variable"', 'system-ui', 'sans-serif'],
       },
       spacing: {
         section: '6rem',
