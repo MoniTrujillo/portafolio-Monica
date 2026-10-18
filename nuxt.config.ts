@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     },
   },
   i18n: {
+    baseUrl: 'https://portafolio-monica.vercel.app',
     locales: [
       { code: 'es', language: 'es-MX', name: 'Español', file: 'es.json' },
       { code: 'en', language: 'en-US', name: 'English', file: 'en.json' },
