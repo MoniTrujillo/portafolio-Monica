@@ -3,7 +3,20 @@ import { siteUrl } from './app/data/site'
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: false },
-  modules: ['@nuxtjs/i18n', '@nuxtjs/tailwindcss', '@nuxt/eslint'],
+  modules: [
+    '@nuxtjs/i18n',
+    '@nuxtjs/tailwindcss',
+    '@nuxt/eslint',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots',
+  ],
+  site: {
+    url: siteUrl,
+    name: 'Mónica Trujillo',
+  },
+  sitemap: {
+    sources: ['/api/__sitemap__/urls'],
+  },
   css: ['~/assets/css/main.css'],
   runtimeConfig: {
     public: {
