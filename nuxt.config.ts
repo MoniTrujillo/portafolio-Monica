@@ -1,3 +1,5 @@
+import { siteUrl } from './app/data/site'
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: false },
@@ -9,7 +11,7 @@ export default defineNuxtConfig({
     },
   },
   i18n: {
-    baseUrl: 'https://portafolio-monica.vercel.app',
+    baseUrl: siteUrl,
     locales: [
       { code: 'es', language: 'es-MX', name: 'Español', file: 'es.json' },
       { code: 'en', language: 'en-US', name: 'English', file: 'en.json' },

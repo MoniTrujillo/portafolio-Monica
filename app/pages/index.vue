@@ -4,7 +4,7 @@ import { certifications, skills, values } from '~/data/site'
 const { t } = useI18n()
 const { data: projects, status, refresh } = useProjects()
 
-useSeoMeta({
+usePageSeo({
   title: () => t('home.seo.title'),
   description: () => t('home.seo.description'),
 })

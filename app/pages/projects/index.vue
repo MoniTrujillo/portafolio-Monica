@@ -14,7 +14,7 @@ const names = computed(() =>
   projects.value.map((project) => t(`projects.items.${project.id}.name`)),
 )
 
-useSeoMeta({
+usePageSeo({
   title: () => t('projects.seo.title'),
   description: () => t('projects.seo.description'),
 })

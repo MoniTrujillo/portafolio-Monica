@@ -7,7 +7,7 @@ const { t } = useI18n()
 const localePath = useLocalePath()
 const is404 = computed(() => props.error.statusCode === 404)
 
-useSeoMeta({
+usePageSeo({
   title: () => t(is404.value ? 'error.notFound.title' : 'error.generic.title'),
   description: () => t(is404.value ? 'error.notFound.text' : 'error.generic.text'),
 })
