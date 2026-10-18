@@ -1,9 +1,17 @@
 import type { MessageSender } from '~/types/contact'
+import { firstError, isEmail, minLength, required } from '~/utils/validators'
+import type { Rule } from '~/utils/validators'
 
-const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const MIN_MESSAGE = 10
 
 type Field = 'name' | 'email' | 'message'
+const FIELDS: Field[] = ['name', 'email', 'message']
+
+const rules: Record<Field, Rule[]> = {
+  name: [required],
+  email: [required, isEmail],
+  message: [required, minLength(MIN_MESSAGE)],
+}
 
 export function useContactForm(sender: MessageSender) {
   const { t } = useI18n()
@@ -12,15 +20,11 @@ export function useContactForm(sender: MessageSender) {
   const fallbackUrl = ref('')
 
   function validate(): boolean {
-    errors.name = values.name.trim() ? '' : t('contact.form.errors.required')
-    if (!values.email.trim()) errors.email = t('contact.form.errors.required')
-    else if (!EMAIL_PATTERN.test(values.email)) errors.email = t('contact.form.errors.email')
-    else errors.email = ''
-    if (!values.message.trim()) errors.message = t('contact.form.errors.required')
-    else if (values.message.trim().length < MIN_MESSAGE)
-      errors.message = t('contact.form.errors.messageShort', { min: MIN_MESSAGE })
-    else errors.message = ''
-    return !errors.name && !errors.email && !errors.message
+    FIELDS.forEach((field) => {
+      const error = firstError(values[field], rules[field])
+      errors[field] = error ? t(error.key, error.params ?? {}) : ''
+    })
+    return FIELDS.every((field) => !errors[field])
   }
 
   function submit() {
