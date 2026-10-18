@@ -18,15 +18,12 @@ const faces = {
 
 watch(flipped, (value) => emit('flip', value))
 
-// Tipo de puntero del último contacto ('touch', 'mouse' o 'pen'). Se guarda en pointerdown,
-// que se dispara antes del click, para saber si el usuario tocó la pantalla con el dedo.
 const pointerType = ref('')
 
 const to = computed(() => localePath(`/projects/${props.project.slug}`))
 
-// En pantallas táctiles el primer toque voltea la tarjeta y el segundo abre el proyecto.
+// En táctil, el primer toque voltea la tarjeta y el segundo abre el proyecto
 function onClick(event: MouseEvent) {
-  // Ctrl/Cmd/Shift + clic: comportamiento normal del navegador (abrir en otra pestaña).
   if (event.metaKey || event.ctrlKey || event.shiftKey || event.button !== 0) return
 
   event.preventDefault()
@@ -43,7 +40,6 @@ function onClick(event: MouseEvent) {
   navigateTo(to.value)
 }
 
-// Un toque fuera de la tarjeta la regresa a su cara frontal.
 function onOutsidePointerDown(event: PointerEvent) {
   if (flipped.value && !link.value?.contains(event.target as Node)) flipped.value = false
 }

@@ -4,7 +4,7 @@ const props = withDefaults(defineProps<{ text: string; active: boolean; speed?: 
 })
 const emit = defineEmits<{ done: [] }>()
 
-// Antes de montar mostramos el texto completo (sirve para SEO y sin JavaScript).
+// Texto completo en SSR para SEO
 const typed = ref(props.text.length)
 const animate = ref(false)
 let timer: ReturnType<typeof setInterval> | undefined

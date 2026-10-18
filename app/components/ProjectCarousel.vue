@@ -5,7 +5,6 @@ defineProps<{ projects: Project[] }>()
 
 const { t } = useI18n()
 const paused = ref(false)
-// Mientras una tarjeta esté volteada (toque en móvil) el carrusel se detiene para poder leerla.
 const cardFlipped = ref(false)
 </script>
 

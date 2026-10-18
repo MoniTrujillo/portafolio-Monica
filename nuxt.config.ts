@@ -5,7 +5,6 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   runtimeConfig: {
     public: {
-      // Cambia el usuario en .env: NUXT_PUBLIC_GITHUB_USER=tu-usuario
       githubUser: 'MoniTrujillo',
     },
   },
