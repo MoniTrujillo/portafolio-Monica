@@ -22,8 +22,8 @@ usePageSeo({
 
 <template>
   <div>
-    <section class="bg-wine px-gutter py-16 text-cream lg:px-12 lg:py-20">
-      <h1 class="mx-auto max-w-page animate-rise text-6xl font-bold sm:text-8xl">
+    <section class="bg-wine py-16 text-cream lg:py-20">
+      <h1 class="container-page animate-rise text-6xl font-bold sm:text-8xl">
         {{ t('projects.title') }}
       </h1>
     </section>

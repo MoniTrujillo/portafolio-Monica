@@ -7,7 +7,7 @@ const year = new Date().getFullYear()
 
 <template>
   <footer class="bg-wine text-cream">
-    <div class="mx-auto max-w-page px-gutter py-12 lg:px-12">
+    <div class="container-page py-12">
       <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <p class="font-serif text-2xl font-semibold sm:text-3xl">{{ t('site.fullName') }}</p>
         <p class="text-sm text-cream/80">{{ t('site.location') }}</p>
