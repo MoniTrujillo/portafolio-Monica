@@ -8,7 +8,7 @@ usePageSeo({
 </script>
 
 <template>
-  <section class="mx-auto max-w-page px-gutter py-section lg:px-12">
+  <section class="container-page py-section">
     <div class="grid items-center gap-12 lg:grid-cols-2">
       <figure class="relative mx-auto w-full max-w-xl [container-type:inline-size]">
         <img src="/images/laptop.png" alt="" width="1090" height="905" class="h-auto w-full" />

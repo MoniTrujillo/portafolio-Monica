@@ -14,7 +14,7 @@ watch(
 
 <template>
   <header class="sticky top-0 z-40 bg-wine text-cream">
-    <div class="mx-auto flex max-w-page items-center justify-between gap-6 px-gutter py-4 lg:px-12">
+    <div class="container-page flex items-center justify-between gap-6 py-4">
       <NuxtLink
         :to="localePath('/')"
         class="font-serif text-lg font-semibold focus-visible:outline-cream"

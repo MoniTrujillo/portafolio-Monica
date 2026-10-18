@@ -32,15 +32,10 @@ usePageSeo({
 
 <template>
   <div>
-    <DataState
-      v-if="!isReady"
-      :status="status"
-      class="mx-auto max-w-page px-gutter"
-      @retry="refresh()"
-    />
+    <DataState v-if="!isReady" :status="status" class="container-page" @retry="refresh()" />
     <template v-else-if="project">
-      <section class="bg-wine px-gutter py-14 text-cream lg:px-12">
-        <div class="mx-auto max-w-page">
+      <section class="bg-wine py-14 text-cream">
+        <div class="container-page">
           <NuxtLink
             :to="localePath('/projects')"
             class="inline-flex items-center gap-2 text-sm hover:underline focus-visible:outline-cream"
@@ -60,7 +55,7 @@ usePageSeo({
         </div>
       </section>
 
-      <div class="mx-auto max-w-page space-y-section px-gutter py-section lg:px-12">
+      <div class="container-page space-y-section py-section">
         <ProjectVisual :project="project" :device="device" class="!aspect-[16/9]" />
 
         <section class="grid gap-10 md:grid-cols-2" :aria-label="t('projects.detail.summary')">

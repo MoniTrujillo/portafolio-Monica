@@ -12,8 +12,8 @@ usePageSeo({
 
 <template>
   <div>
-    <section class="bg-wine px-gutter pb-20 pt-16 text-cream lg:px-12 lg:pb-28 lg:pt-24">
-      <div class="mx-auto max-w-page">
+    <section class="bg-wine pb-20 pt-16 text-cream lg:pb-28 lg:pt-24">
+      <div class="container-page">
         <h1
           class="max-w-3xl animate-rise text-6xl font-bold leading-[0.95] sm:text-8xl lg:text-9xl"
         >
@@ -29,10 +29,7 @@ usePageSeo({
 
     <TextMarquee :items="values.map((key) => t(`home.values.${key}`))" />
 
-    <section
-      class="mx-auto max-w-page px-gutter py-section lg:px-12"
-      aria-labelledby="featuredTitle"
-    >
+    <section class="container-page py-section" aria-labelledby="featuredTitle">
       <h2 id="featuredTitle" class="mb-10 text-4xl font-bold sm:text-5xl">
         {{ t('home.featured.title') }}
       </h2>
@@ -41,8 +38,8 @@ usePageSeo({
       </DataState>
     </section>
 
-    <section class="bg-wine px-gutter py-section text-cream lg:px-12" aria-labelledby="skillsTitle">
-      <div class="mx-auto max-w-page">
+    <section class="bg-wine py-section text-cream" aria-labelledby="skillsTitle">
+      <div class="container-page">
         <h2 id="skillsTitle" class="text-4xl font-bold sm:text-5xl">
           {{ t('home.skills.title') }}
         </h2>
@@ -59,7 +56,7 @@ usePageSeo({
       </div>
     </section>
 
-    <section class="mx-auto max-w-page px-gutter py-section lg:px-12" aria-labelledby="certsTitle">
+    <section class="container-page py-section" aria-labelledby="certsTitle">
       <h2 id="certsTitle" class="text-4xl font-bold sm:text-5xl">
         {{ t('home.certifications.title') }}
       </h2>
