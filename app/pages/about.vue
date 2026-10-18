@@ -7,7 +7,7 @@ const textBlock = ref<HTMLElement>()
 const inView = useInView(textBlock)
 const current = ref(0)
 
-useSeoMeta({
+usePageSeo({
   title: () => t('about.seo.title'),
   description: () => t('about.seo.description'),
 })

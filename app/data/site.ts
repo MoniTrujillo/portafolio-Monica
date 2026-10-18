@@ -1,3 +1,5 @@
+export const siteUrl = 'https://portafolio-monica.vercel.app'
+
 export const whatsappNumber = '524431468028'
 
 export const socials = [

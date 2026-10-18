@@ -23,7 +23,7 @@ if (status.value === REQUEST_STATUS.success && !project.value) {
 const name = computed(() => (project.value ? t(`projects.items.${project.value.id}.name`) : ''))
 const device = computed(() => (project.value?.category === 'web' ? 'browser' : 'phone'))
 
-useSeoMeta({
+usePageSeo({
   title: () =>
     project.value ? t('projects.detail.seoTitle', { name: name.value }) : t('projects.title'),
   description: () => (project.value ? t(`projects.items.${project.value.id}.summary`) : ''),
