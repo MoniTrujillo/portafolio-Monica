@@ -1,6 +1,12 @@
 <script setup lang="ts">
+import { whatsappNumber } from '~/data/site'
+import { createWhatsappSender } from '~/services/whatsappSender'
+
 const { t } = useI18n()
-const { values, errors, whatsappUrl, submit } = useContactForm()
+const sender = createWhatsappSender(whatsappNumber, (message) =>
+  t('contact.form.whatsappMessage', { ...message }),
+)
+const { values, errors, fallbackUrl, submit } = useContactForm(sender)
 
 const fields = [
   { key: 'name', type: 'text', autocomplete: 'name' },
@@ -55,10 +61,10 @@ const inputClass =
 
     <AppButton icon="arrowUpRight" type="submit">{{ t('contact.form.submit') }}</AppButton>
 
-    <p v-if="whatsappUrl" role="status" class="rounded-xl bg-wine p-4 text-sm text-cream">
+    <p v-if="fallbackUrl" role="status" class="rounded-xl bg-wine p-4 text-sm text-cream">
       {{ t('contact.form.success') }}
       <a
-        :href="whatsappUrl"
+        :href="fallbackUrl"
         target="_blank"
         rel="noopener noreferrer"
         class="font-semibold underline focus-visible:outline-cream"

@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { HTTP_STATUS } from '~/utils/httpErrors'
+import { REQUEST_STATUS } from '~/utils/requestStatus'
+
 const route = useRoute()
 const { t } = useI18n()
 const localePath = useLocalePath()
@@ -7,8 +10,14 @@ const { data: projects, status, refresh } = await useProjects()
 const slug = computed(() => String(route.params.slug))
 const project = computed(() => projects.value.find((item) => item.slug === slug.value))
 
-if (status.value === 'success' && !project.value) {
-  throw createError({ statusCode: 404, statusMessage: 'Project not found', fatal: true })
+const isReady = computed(() => status.value === REQUEST_STATUS.success)
+
+if (status.value === REQUEST_STATUS.success && !project.value) {
+  throw createError({
+    statusCode: HTTP_STATUS.notFound,
+    statusMessage: 'Project not found',
+    fatal: true,
+  })
 }
 
 const name = computed(() => (project.value ? t(`projects.items.${project.value.id}.name`) : ''))
@@ -24,7 +33,7 @@ useSeoMeta({
 <template>
   <div>
     <DataState
-      v-if="status !== 'success'"
+      v-if="!isReady"
       :status="status"
       class="mx-auto max-w-page px-gutter"
       @retry="refresh()"
