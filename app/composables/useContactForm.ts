@@ -1,24 +1,15 @@
-import { whatsappNumber } from '~/data/site'
+import type { MessageSender } from '~/types/contact'
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const MIN_MESSAGE = 10
 
 type Field = 'name' | 'email' | 'message'
 
-export function useContactForm() {
+export function useContactForm(sender: MessageSender) {
   const { t } = useI18n()
   const values = reactive<Record<Field, string>>({ name: '', email: '', message: '' })
   const errors = reactive<Record<Field, string>>({ name: '', email: '', message: '' })
-  const whatsappUrl = ref('')
-
-  const buildWhatsappUrl = () => {
-    const text = t('contact.form.whatsappMessage', {
-      name: values.name.trim(),
-      email: values.email.trim(),
-      message: values.message.trim(),
-    })
-    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`
-  }
+  const fallbackUrl = ref('')
 
   function validate(): boolean {
     errors.name = values.name.trim() ? '' : t('contact.form.errors.required')
@@ -34,9 +25,13 @@ export function useContactForm() {
 
   function submit() {
     if (!validate()) return
-    whatsappUrl.value = buildWhatsappUrl()
-    window.open(whatsappUrl.value, '_blank', 'noopener')
+    fallbackUrl.value =
+      sender.send({
+        name: values.name.trim(),
+        email: values.email.trim(),
+        message: values.message.trim(),
+      }) ?? ''
   }
 
-  return { values, errors, whatsappUrl, submit }
+  return { values, errors, fallbackUrl, submit }
 }
